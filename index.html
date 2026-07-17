@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Elle</title>
+  <style>
+    :root {
+      --primary-color: #ff477e;
+      --accent-yellow: #fcd116;
+      --bg-color: #fff3f5;
+      --text-dark: #333333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial Black', Impact, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Main Container */
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      border: 4px solid var(--text-dark);
+    }
+
+    h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .pleading-text {
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      font-weight: bold;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    .divider {
+      height: 4px;
+      background: var(--text-dark);
+      margin: 20px 0;
+    }
+
+    /* Itinerary Styling */
+    .details-container {
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .date-badge {
+      background: var(--accent-yellow);
+      color: var(--text-dark);
+      padding: 10px 20px;
+      border-radius: 0px;
+      display: inline-block;
+      font-weight: 900;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      border: 3px solid var(--text-dark);
+      text-transform: uppercase;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 20px;
+      border-left: 4px solid var(--text-dark);
+      margin-left: 10px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .time {
+      font-weight: 900;
+      color: var(--primary-color);
+      font-size: 0.95rem;
+    }
+
+    .activity {
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      margin-top: 2px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+      position: relative;
+      min-height: 60px;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      border: 3px solid var(--text-dark);
+      border-radius: 0px;
+      font-weight: 900;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 4px 4px 0px var(--text-dark);
+      transition: transform 0.1s ease;
+    }
+
+    .btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px var(--text-dark);
+    }
+
+    .btn-yes {
+      background-color: var(--accent-yellow);
+      color: var(--text-dark);
+    }
+
+    .btn-no {
+      background-color: #e0e0e0;
+      color: #757575;
+      position: relative;
+    }
+
+    /* Success Screen */
+    .success-content {
+      display: none;
+    }
+
+    .success-content h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .success-gif-container {
+      width: 100%;
+      margin: 20px 0;
+      border: 4px solid var(--text-dark);
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .success-gif {
+      width: 100%;
+      height: auto;
+    }
+
+    .success-p {
+      font-size: 1.3rem;
+      font-weight: 900;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .calendar-btn {
+      background-color: #4285f4;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Card -->
+  <div class="card" id="dateCard">
+    <div id="inviteScreen">
+      <h1>HELLO</h1>
+      <p class="pleading-text">Please please please please may you go on a date with me PLEASE</p>
+      
+      <div class="divider"></div>
+
+      <div class="details-container">
+        <span class="date-badge">Saturday, July 18 at 5:00 PM</span>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time">5:00 PM</div>
+            <div class="activity">Meet up</div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">5:15 PM</div>
+            <div class="activity">Dinner at Bonifacio</div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">6:30 PM</div>
+            <div class="activity">Movie Time: The Odyssey at Gateway</div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">9:00 PM</div>
+            <div class="activity">Shakes at Shake No Eight and walk home</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="btn-group">
+        <button class="btn btn-yes" onclick="acceptDate()">YES!</button>
+        <button class="btn btn-no" id="noBtn" onmouseover="dodgeButton()" onclick="dodgeButton()">No</button>
+      </div>
+    </div>
+
+    <!-- Success Screen -->
+    <div id="successScreen" class="success-content">
+      <h2>BANGGGGGG</h2>
+      
+      <div class="success-gif-container">
+        <!-- Hotlink-safe direct static Giphy URL for Minions cheering -->
+        <img class="success-gif" src="https://i.giphy.com/media/11sBLVxNs7v6WA/giphy.gif" alt="Minions Cheering">
+      </div>
+
+      <p class="success-p">Cya on Saturday, BOI!</p>
+      
+      <!-- Google Calendar Link Generation -->
+      <a class="btn calendar-btn" id="googleCalendarLink" target="_blank" href="#">Add to Google Calendar</a>
+    </div>
+  </div>
+
+  <script>
+    // Playful dodge button logic
+    const noBtn = document.getElementById('noBtn');
+    let scale = 1;
+
+    function dodgeButton() {
+      scale -= 0.15;
+      if (scale < 0.2) {
+        noBtn.style.display = 'none'; 
+      } else {
+        noBtn.style.transform = `scale(${scale})`;
+      }
+
+      const x = Math.random() * 140 - 70; 
+      const y = Math.random() * 60 - 30;  
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    }
+
+    // Switch to success screen
+    function acceptDate() {
+      document.getElementById('inviteScreen').style.display = 'none';
+      document.getElementById('successScreen').style.display = 'block';
+    }
+
+    // Generate Google Calendar Link dynamically
+    const eventTitle = encodeURIComponent("Date with the Goat");
+    const eventDates = "20260718T170000/20260718T230000"; // July 18, 2026: 5 PM to 11 PM
+    const eventDetails = encodeURIComponent(
+      "Itinerary:\n" +
+      "5:00 PM - Meet up\n" +
+      "5:15 PM - Dinner at Bonifacio\n" +
+      "6:30 PM - The Odyssey at Gateway Film Center\n" +
+      "9:00 PM - Shakes at Shake No Eight & walk home"
+    );
+    const eventLocation = encodeURIComponent("Bonifacio, Columbus, OH");
+
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&dates=${eventDates}&details=${eventDetails}&location=${eventLocation}`;
+    
+    document.getElementById('googleCalendarLink').href = googleCalendarUrl;
+  </script>
+</body>
+</html>
